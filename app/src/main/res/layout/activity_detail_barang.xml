@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".DetailBarang">
+    <ImageView
+        android:id="@+id/imageViewBarang"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewBarang"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/text"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvHarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNama"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/text"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvStok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHarga"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/text"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:id="@+id/laytambahdankurangstok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/tvStok">
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/btn_orange">
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etJumlahBeli"
+                android:background="#00000000"
+                android:text="+"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/etJumlahBeli"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textSize="20sp"
+            android:text="1"
+            android:textColor="@color/text"
+            android:inputType="number"/>
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/btn_orange">
+            <Button
+                android:id="@+id/btnKurang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="-"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/laytambahdankurangstok">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_hijau">
+            <Button
+                android:id="@+id/btnBeliBarang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:text="Beli Barang" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
